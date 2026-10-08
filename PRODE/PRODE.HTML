@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+    <form method="post" action="guardar_pronostico.php">
+
+    <input type="hidden" name="partido_id" value="<?= $partido['id'] ?>">
+
+    <h3>
+        <?= $partido['equipo_local'] ?>
+        vs
+        <?= $partido['equipo_visitante'] ?>
+    </h3>
+
+    <input
+        type="number"
+        name="goles_local"
+        min="0"
+        required
+    >
+
+    <input
+        type="number"
+        name="goles_visitante"
+        min="0"
+        required
+    >
+
+    <button type="submit">
+        Guardar Pronóstico
+    </button>
+
+</form></body>
+</html>
